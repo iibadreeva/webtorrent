@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Oline player для torrent-файлов</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="js/webtorrent.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <section class="main">
+    <div class="progress">
+        <p>Пожалуйста, подождите, файлы загружаются.</p>
+        <progress max="100" value="0"></progress>
+        <div class="progress-value"></div>
+        <div class="progress-bg"><div class="progress-bar"></div></div>
+    </div>
+
+    <form class="form">
+      <p class="form__label"><label for="torrentId">Текстовое поле для ввода magnet-ссылки: </label></p>
+      <div class="form__load">
+        <input class="form__input" id="torrentId" name="torrentId", placeholder="magnet:" value="">
+      
+      <button class="form__submit" type="submit">Загрузить</button>
+      </div>
+    </form>
+    <div class="log"></div>
+    <div class="error-class"></div>
+    <div class="result"></div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>
